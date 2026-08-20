@@ -1358,16 +1358,15 @@ footer {
 
   position: fixed;
 
-  right: 22px;
-  bottom: 22px;
+  right: 24px;
+  bottom: 24px;
+
+  width: 62px;
+  height: 62px;
 
   z-index: 9999;
 
-  width: 58px;
-  height: 58px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -1376,7 +1375,7 @@ footer {
   border-radius: 50%;
 
   box-shadow:
-    0 8px 25px rgba(37, 211, 102, .30);
+    0 8px 25px rgba(37, 211, 102, 0.35);
 
   transition:
     transform .25s ease,
@@ -1384,10 +1383,12 @@ footer {
 
 }
 
-.whatsapp-float img {
+.whatsapp-float svg {
 
-  width: 31px;
-  height: 31px;
+  width: 34px;
+  height: 34px;
+
+  fill: #ffffff;
 
   display: block;
 
@@ -1395,13 +1396,12 @@ footer {
 
 .whatsapp-float:hover {
 
-  transform: translateY(-4px) scale(1.05);
+  transform: translateY(-4px) scale(1.06);
 
   box-shadow:
-    0 12px 30px rgba(37, 211, 102, .40);
+    0 12px 32px rgba(37, 211, 102, 0.45);
 
 }
-
 /* =========================================================
    RESPONSIVE
 ========================================================= */
