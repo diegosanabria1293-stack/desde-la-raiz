@@ -1736,3 +1736,39 @@ footer {
   }
 
 }
+/* ===== CORRECCIÓN DE TEXTO EN EL HERO ===== */
+
+.hero h1 {
+    color: #3f3025 !important;
+    text-shadow: none !important;
+}
+
+.hero p {
+    color: #4f4035 !important;
+    text-shadow: none !important;
+}
+
+.hero .price {
+    color: #7a4b2a !important;
+    font-weight: 800;
+    text-shadow: none !important;
+}
+
+.hero .content,
+.hero .hero-content {
+    color: #3f3025;
+}
+
+/* Texto de contenido y presentación */
+.hero .subtitle,
+.hero .description,
+.hero .product-info {
+    color: #4f4035 !important;
+}
+
+/* Precio más visible */
+.hero .price {
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
