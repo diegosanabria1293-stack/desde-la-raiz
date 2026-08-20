@@ -5,31 +5,32 @@
 
 :root {
 
-  --green: #183C2B;
-  --green-2: #2F6045;
-  --green-light: #E8EFE8;
+  --green: #123B29;
+  --green-2: #28563D;
 
-  --cream: #F7F3EA;
-  --cream-dark: #EEE7D8;
+  --green-light: #DDE8DF;
 
-  --brown: #7A4E2D;
-  --brown-dark: #4D321F;
+  --cream: #F5F1E7;
+  --cream-dark: #E8E0D0;
 
-  --gold: #B89455;
+  --brown: #79502F;
+  --brown-dark: #402817;
+
+  --gold: #C5A45D;
 
   --white: #FFFFFF;
-  --text: #263028;
-  --text-light: #69736C;
 
-  --border: rgba(24, 60, 43, .12);
+  --text: #203127;
+  --text-light: #69766D;
+
+  --border: rgba(18, 59, 41, .15);
 
   --shadow:
-    0 20px 60px rgba(31, 48, 38, .10);
+    0 20px 60px rgba(18, 59, 41, .14);
 
   --radius: 24px;
 
 }
-
 
 /* =========================================================
    RESET
@@ -255,6 +256,8 @@ h2 span {
 
 .hero {
 
+ .hero {
+
   position: relative;
 
   min-height: 780px;
@@ -267,15 +270,54 @@ h2 span {
 
   overflow: hidden;
 
+  color: white;
+
   background:
 
     radial-gradient(
       circle at 75% 45%,
-      rgba(184,148,85,.16),
+      rgba(197,164,93,.15),
       transparent 30%
     ),
 
-    var(--cream);
+    linear-gradient(
+      135deg,
+      #0C3020 0%,
+      #17452F 55%,
+      #123B29 100%
+    );
+
+}.hero-content h1 {
+  color: #ffffff;
+}
+
+.hero-content h1 span {
+  color: #D7BD86;
+}
+
+.hero-description {
+  color: rgba(255,255,255,.78);
+}
+
+.hero-price span {
+  color: #ffffff;
+}
+
+.hero-price small {
+  color: rgba(255,255,255,.65);
+}
+
+.hero-trust {
+  border-top-color: rgba(255,255,255,.18);
+}
+
+.hero-trust strong {
+  color: #ffffff;
+}
+
+.hero-trust span {
+  color: rgba(255,255,255,.60);
+}
 
 }
 
