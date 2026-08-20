@@ -202,3 +202,158 @@ height:65px;
 }
 
 }
+/* =========================
+   FOOTER PREMIUM
+========================= */
+
+.footer{
+
+    background:#211b16;
+    color:#f7f2eb;
+    padding:70px 8% 0;
+
+}
+
+.footer-container{
+
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1.2fr;
+
+    gap:60px;
+
+    padding-bottom:50px;
+
+}
+
+.footer-brand{
+
+    max-width:350px;
+
+}
+
+.footer-logo{
+
+    width:150px;
+    height:auto;
+    margin-bottom:20px;
+
+    filter:brightness(0) invert(1);
+
+}
+
+.footer p{
+
+    color:#cfc6bb;
+    font-size:14px;
+    line-height:1.8;
+
+}
+
+.footer h3{
+
+    color:#d1a35c;
+    font-family:'Playfair Display',serif;
+
+    font-size:21px;
+
+    margin-bottom:20px;
+
+}
+
+.footer-info p{
+
+    margin-bottom:8px;
+
+}
+
+.footer-contact p{
+
+    margin-bottom:20px;
+
+}
+
+.footer-btn{
+
+    display:inline-block;
+
+    background:#b28a4a;
+
+    color:white;
+
+    padding:13px 22px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.footer-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#c39b5b;
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    text-align:center;
+
+    padding:25px 10px;
+
+}
+
+.footer-bottom p{
+
+    font-size:12px;
+
+    margin:0;
+
+}
+
+
+/* =========================
+   FOOTER MÓVIL
+========================= */
+
+@media(max-width:768px){
+
+    .footer{
+
+        padding:50px 25px 0;
+
+        text-align:center;
+
+    }
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    .footer-brand{
+
+        margin:auto;
+
+    }
+
+    .footer-logo{
+
+        width:130px;
+
+    }
+
+}
