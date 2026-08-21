@@ -1796,3 +1796,220 @@ footer {
     color: #5A4637 !important;
     font-weight: 600 !important;
 }
+/* =========================================================
+   HERO — MÓVIL
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .header {
+
+    position: absolute;
+
+  }
+
+
+  .nav {
+
+    min-height: 70px;
+
+    justify-content: center;
+
+  }
+
+
+  .nav-links {
+
+    display: none;
+
+  }
+
+
+  .nav-btn {
+
+    display: inline-flex;
+
+    padding: 9px 17px;
+
+    font-size: 13px;
+
+  }
+
+
+  .hero {
+
+    min-height: auto;
+
+  }
+
+
+  .hero-container {
+
+    width: 90%;
+
+    min-height: auto;
+
+    padding-top: 100px;
+
+    padding-bottom: 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    text-align: center;
+
+  }
+
+
+  .hero-content {
+
+    padding: 35px 0 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+  }
+
+
+  .hero-tag {
+
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+  }
+
+
+  .hero-content h1 {
+
+    font-size: clamp(48px, 14vw, 68px);
+
+    line-height: .92;
+
+    letter-spacing: -2px;
+
+  }
+
+
+  .hero-content p {
+
+    margin: 22px auto 28px;
+
+    max-width: 340px;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+
+  }
+
+
+  .hero-whatsapp {
+
+    min-width: auto;
+
+    width: 100%;
+
+    max-width: 310px;
+
+    padding: 15px 20px;
+
+  }
+
+
+  .hero-product {
+
+    min-height: 320px;
+
+    width: 100%;
+
+    margin-top: -10px;
+
+  }
+
+
+  .hero-product::before {
+
+    width: 350px;
+
+    height: 350px;
+
+  }
+
+
+  .hero-product img {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    max-height: 340px;
+
+  }
+
+
+  .trust-section {
+
+    padding: 25px 0;
+
+  }
+
+
+  .trust-grid {
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px 12px;
+
+  }
+
+
+  .trust-item {
+
+    gap: 10px;
+
+  }
+
+
+  .trust-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+  }
+
+
+  .trust-icon svg {
+
+    width: 23px;
+
+    height: 23px;
+
+  }
+
+
+  .trust-item strong {
+
+    font-size: 12px;
+
+  }
+
+
+  .trust-item span {
+
+    font-size: 10px;
+
+  }
+
+}
