@@ -251,105 +251,62 @@ h2 span {
 
 
 /* =========================================================
-   HERO
+   HERO — DESDE LA RAÍZ
 ========================================================= */
 
 .hero {
 
- .hero {
-
   position: relative;
 
-  min-height: 780px;
-
-  padding-top: 120px;
-
-  display: flex;
-
-  align-items: center;
+  min-height: 650px;
 
   overflow: hidden;
 
-  color: white;
-
   background:
-
     radial-gradient(
-      circle at 75% 45%,
-      rgba(197,164,93,.15),
-      transparent 30%
+      circle at 72% 45%,
+      rgba(73, 105, 67, .35),
+      transparent 32%
     ),
 
     linear-gradient(
-      135deg,
-      #0C3020 0%,
-      #17452F 55%,
-      #123B29 100%
+      120deg,
+      #092B1C 0%,
+      #103B27 50%,
+      #17472F 100%
     );
 
-}.hero-content h1 {
   color: #ffffff;
-}
-
-.hero-content h1 span {
-  color: #D7BD86;
-}
-
-.hero-description {
-  color: rgba(255,255,255,.78);
-}
-
-.hero-price span {
-  color: #ffffff;
-}
-
-.hero-price small {
-  color: rgba(255,255,255,.65);
-}
-
-.hero-trust {
-  border-top-color: rgba(255,255,255,.18);
-}
-
-.hero-trust strong {
-  color: #ffffff;
-}
-
-.hero-trust span {
-  color: rgba(255,255,255,.60);
-}
 
 }
 
-.hero-glow {
 
-  position: absolute;
+/* CONTENEDOR */
 
-  width: 500px;
-  height: 500px;
+.hero-container {
 
-  right: 0;
-  top: 100px;
+  width: 90%;
 
-  background: rgba(47,96,69,.12);
+  max-width: 1250px;
 
-  filter: blur(100px);
+  min-height: 650px;
 
-  border-radius: 50%;
-
-}
-
-.hero-grid {
+  margin: auto;
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.15fr;
 
   align-items: center;
 
-  gap: 50px;
+  gap: 30px;
 
 }
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
 
 .hero-content {
 
@@ -357,173 +314,289 @@ h2 span {
 
   z-index: 2;
 
-}
-
-.hero-description {
-
-  max-width: 560px;
-
-  margin: 25px 0;
-
-  color: var(--text-light);
-
-  font-size: 1.05rem;
+  padding: 70px 0;
 
 }
 
-.hero-price {
+
+.hero-tag {
 
   display: flex;
 
   align-items: center;
 
-  gap: 15px;
+  gap: 12px;
 
-  margin: 25px 0;
+  margin-bottom: 22px;
 
-}
+  color: #D6B96C;
 
-.hero-price span {
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 2rem;
-
-  color: var(--green);
+  font-size: 14px;
 
   font-weight: 700;
 
-}
-
-.hero-price small {
-
-  color: var(--text-light);
+  letter-spacing: 4px;
 
 }
 
-.hero-buttons {
 
-  display: flex;
+.hero-tag span {
 
-  align-items: center;
+  width: 32px;
 
-  gap: 15px;
+  height: 1px;
 
-  flex-wrap: wrap;
+  background: #D6B96C;
 
 }
 
-.btn-primary {
+
+/* TÍTULO */
+
+.hero-content h1 {
+
+  margin: 0;
+
+  max-width: 570px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(60px, 6vw, 92px);
+
+  line-height: .95;
+
+  font-weight: 500;
+
+  letter-spacing: -3px;
+
+  color: #ffffff;
+
+}
+
+
+.hero-content h1 span {
+
+  display: block;
+
+  color: #E3D0A2;
+
+}
+
+
+/* DESCRIPCIÓN */
+
+.hero-content p {
+
+  max-width: 480px;
+
+  margin: 28px 0 34px;
+
+  color: rgba(255,255,255,.82);
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   BOTÓN WHATSAPP DEL HERO
+========================================================= */
+
+.hero-whatsapp {
 
   display: inline-flex;
 
   align-items: center;
 
+  justify-content: center;
+
   gap: 18px;
 
-  padding: 16px 24px;
+  min-width: 300px;
 
-  border-radius: 100px;
+  padding: 17px 28px;
 
-  background: var(--green);
+  border-radius: 50px;
 
-  color: white;
+  background: #ffffff;
+
+  color: #183D29;
+
+  text-decoration: none;
+
+  font-size: 16px;
 
   font-weight: 700;
 
-  transition: .3s ease;
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.18);
 
-  box-shadow: 0 12px 30px rgba(24,60,43,.18);
-
-}
-
-.btn-primary span {
-
-  color: white;
-
-  transition: .3s ease;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
 
 }
 
-.btn-primary:hover {
+
+.hero-whatsapp span {
+
+  font-size: 22px;
+
+  line-height: 1;
+
+}
+
+
+.hero-whatsapp:hover {
 
   transform: translateY(-3px);
 
-  background: var(--green-2);
+  box-shadow:
+    0 16px 40px rgba(0,0,0,.25);
+
+}
+/* =========================================================
+   FRANJA DE BENEFICIOS
+========================================================= */
+
+.trust-section {
+
+  background: #193F2C;
+
+  color: white;
+
+  padding: 28px 0;
 
 }
 
-.btn-primary:hover span {
 
-  transform: translateX(5px);
+.trust-grid {
 
-}
+  width: 90%;
 
-.btn-secondary {
+  max-width: 1250px;
 
-  padding: 15px 20px;
+  margin: auto;
 
-  border: 1px solid var(--border);
+  display: grid;
 
-  border-radius: 100px;
-
-  color: var(--green);
-
-  font-weight: 600;
-
-  background: rgba(255,255,255,.5);
-
-}
-
-.hero-trust {
-
-  display: flex;
+  grid-template-columns:
+    repeat(4, 1fr);
 
   gap: 30px;
 
-  margin-top: 45px;
-
-  padding-top: 25px;
-
-  border-top: 1px solid var(--border);
-
 }
 
-.hero-trust div {
+
+.trust-item {
 
   display: flex;
 
-  flex-direction: column;
+  align-items: center;
+
+  gap: 16px;
 
 }
 
-.hero-trust strong {
 
-  color: var(--green);
+.trust-icon {
 
-  font-size: .9rem;
+  width: 62px;
+
+  height: 62px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(204,183,112,.12);
+
+  border: 1px solid rgba(204,183,112,.12);
 
 }
 
-.hero-trust span {
 
-  color: var(--text-light);
+.trust-icon svg {
 
-  font-size: .7rem;
+  width: 28px;
+
+  height: 28px;
 
 }
+
+
+.trust-item strong {
+
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+}
+
+
+.trust-item span {
+
+  color: rgba(255,255,255,.65);
+
+  font-size: 13px;
+
+}
+
+
+/* =========================================================
+   PRODUCTO
+========================================================= */
 
 .hero-product {
 
   position: relative;
 
-  display: flex;
+  height: 100%;
 
-  justify-content: center;
+  min-height: 580px;
+
+  display: flex;
 
   align-items: center;
 
+  justify-content: center;
+
 }
+
+
+.hero-product::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+
+  height: 600px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(91,122,77,.25),
+      transparent 68%
+    );
+
+}
+
 
 .hero-product img {
 
@@ -531,97 +604,20 @@ h2 span {
 
   z-index: 2;
 
-  width: min(100%, 600px);
+  width: 100%;
 
-  filter: drop-shadow(
-    0 35px 35px rgba(63,42,25,.20)
-  );
+  max-width: 620px;
 
-  animation: productFloat 6s ease-in-out infinite;
+  max-height: 570px;
 
-}
+  object-fit: contain;
 
-.product-glow {
+  display: block;
 
-  position: absolute;
-
-  width: 420px;
-  height: 420px;
-
-  border-radius: 50%;
-
-  background: rgba(184,148,85,.18);
-
-  filter: blur(50px);
+  filter:
+    drop-shadow(0 30px 35px rgba(0,0,0,.35));
 
 }
-
-.floating-badge {
-
-  position: absolute;
-
-  right: 0;
-
-  bottom: 30px;
-
-  z-index: 5;
-
-  width: 110px;
-  height: 110px;
-
-  border-radius: 50%;
-
-  background: var(--white);
-
-  border: 1px solid var(--border);
-
-  box-shadow: var(--shadow);
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-direction: column;
-
-  text-align: center;
-
-  color: var(--green);
-
-  font-size: .65rem;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-
-  letter-spacing: .05em;
-
-}
-
-.floating-badge span {
-
-  color: var(--gold);
-
-  font-size: 1.2rem;
-
-  margin-bottom: 4px;
-
-}
-
-@keyframes productFloat {
-
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-}
-
-
 /* =========================================================
    TRUST
 ========================================================= */
