@@ -5,18 +5,16 @@
 
 :root {
 
-  --green: #123B29;
-  --green-2: #28563D;
-
-  --green-light: #DDE8DF;
+  --green-dark: #082A1B;
+  --green: #103B27;
+  --green-2: #1C4A32;
+  --green-soft: #294F39;
 
   --cream: #F5F1E7;
   --cream-dark: #E8E0D0;
 
-  --brown: #79502F;
-  --brown-dark: #402817;
-
-  --gold: #C5A45D;
+  --gold: #D5B96C;
+  --gold-light: #E3D0A2;
 
   --white: #FFFFFF;
 
@@ -29,8 +27,8 @@
     0 20px 60px rgba(18, 59, 41, .14);
 
   --radius: 24px;
-
 }
+
 
 /* =========================================================
    RESET
@@ -42,9 +40,11 @@
   box-sizing: border-box;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
+
 
 body {
 
@@ -57,13 +57,14 @@ body {
   line-height: 1.6;
 
   overflow-x: hidden;
-
 }
+
 
 img {
   max-width: 100%;
   display: block;
 }
+
 
 a {
   color: inherit;
@@ -80,8 +81,8 @@ a {
   width: min(90%, 1180px);
 
   margin: auto;
-
 }
+
 
 .eyebrow {
 
@@ -96,8 +97,8 @@ a {
   letter-spacing: .22em;
 
   margin-bottom: 18px;
-
 }
+
 
 h1,
 h2,
@@ -108,35 +109,32 @@ h3 {
   font-weight: 600;
 
   line-height: 1.08;
-
 }
+
 
 h1 {
-
   font-size: clamp(3rem, 6vw, 5.5rem);
-
 }
+
 
 h2 {
-
   font-size: clamp(2.4rem, 4vw, 4rem);
-
 }
+
 
 h1 span,
 h2 span {
-
   color: var(--green-2);
-
 }
+
 
 .section-heading {
 
   max-width: 700px;
 
   margin-bottom: 55px;
-
 }
+
 
 .section-heading p {
 
@@ -145,8 +143,8 @@ h2 span {
   color: var(--text-light);
 
   max-width: 600px;
-
 }
+
 
 .centered {
 
@@ -154,7 +152,6 @@ h2 span {
 
   margin-left: auto;
   margin-right: auto;
-
 }
 
 
@@ -172,38 +169,32 @@ h2 span {
   width: 100%;
 
   z-index: 100;
-
 }
+
 
 .nav {
 
-  min-height: 100px;
+  min-height: 105px;
 
   display: flex;
 
   align-items: center;
 
-  justify-content: space-between;
+  justify-content: flex-end;
 
-  gap: 30px;
-
+  gap: 42px;
 }
 
-.logo img {
-
-  width: 145px;
-
-  height: auto;
-
-}
 
 .nav-links {
 
   display: flex;
 
-  gap: 32px;
+  align-items: center;
 
+  gap: 38px;
 }
+
 
 .nav-links a {
 
@@ -211,77 +202,76 @@ h2 span {
 
   font-weight: 500;
 
-  color: var(--green);
+  color: rgba(255,255,255,.92);
 
   transition: .25s ease;
-
 }
+
 
 .nav-links a:hover {
 
-  color: var(--brown);
-
+  color: var(--gold);
 }
+
 
 .nav-btn {
 
-  background: var(--green);
+  border: 2px solid var(--gold);
 
-  color: white;
+  color: var(--gold);
 
-  padding: 12px 21px;
+  padding: 11px 21px;
 
-  border-radius: 100px;
+  border-radius: 10px;
 
   font-size: .85rem;
 
   font-weight: 700;
 
   transition: .25s ease;
-
 }
+
 
 .nav-btn:hover {
 
+  background: var(--gold);
+
+  color: var(--green-dark);
+
   transform: translateY(-2px);
-
-  background: var(--green-2);
-
 }
 
 
 /* =========================================================
-   HERO — DESDE LA RAÍZ
+   HERO
 ========================================================= */
 
 .hero {
 
   position: relative;
 
-  min-height: 650px;
+  min-height: 730px;
 
   overflow: hidden;
 
   background:
+
     radial-gradient(
-      circle at 72% 45%,
-      rgba(73, 105, 67, .35),
-      transparent 32%
+      circle at 75% 45%,
+      rgba(73, 105, 67, .32),
+      transparent 34%
     ),
 
     linear-gradient(
-      120deg,
-      #092B1C 0%,
-      #103B27 50%,
-      #17472F 100%
+      115deg,
+      #062719 0%,
+      #0B321F 45%,
+      #17442D 100%
     );
 
-  color: #ffffff;
-
+  color: white;
 }
 
-
-/* CONTENEDOR */
 
 .hero-container {
 
@@ -289,33 +279,31 @@ h2 span {
 
   max-width: 1250px;
 
-  min-height: 650px;
+  min-height: 730px;
 
   margin: auto;
 
   display: grid;
 
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: .9fr 1.25fr;
 
   align-items: center;
 
-  gap: 30px;
-
+  gap: 10px;
 }
 
 
 /* =========================================================
-   TEXTO
+   HERO TEXTO
 ========================================================= */
 
 .hero-content {
 
   position: relative;
 
-  z-index: 2;
+  z-index: 5;
 
-  padding: 70px 0;
-
+  padding-top: 45px;
 }
 
 
@@ -327,16 +315,15 @@ h2 span {
 
   gap: 12px;
 
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 
-  color: #D6B96C;
+  color: var(--gold);
 
   font-size: 14px;
 
   font-weight: 700;
 
   letter-spacing: 4px;
-
 }
 
 
@@ -346,31 +333,27 @@ h2 span {
 
   height: 1px;
 
-  background: #D6B96C;
-
+  background: var(--gold);
 }
 
-
-/* TÍTULO */
 
 .hero-content h1 {
 
   margin: 0;
 
-  max-width: 570px;
+  max-width: 600px;
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Playfair Display", Georgia, serif;
 
-  font-size: clamp(60px, 6vw, 92px);
+  font-size: clamp(58px, 6vw, 88px);
 
-  line-height: .95;
+  line-height: .94;
 
   font-weight: 500;
 
   letter-spacing: -3px;
 
-  color: #ffffff;
-
+  color: white;
 }
 
 
@@ -378,30 +361,26 @@ h2 span {
 
   display: block;
 
-  color: #E3D0A2;
-
+  color: var(--gold-light);
 }
 
 
-/* DESCRIPCIÓN */
-
 .hero-content p {
 
-  max-width: 480px;
+  max-width: 500px;
 
   margin: 28px 0 34px;
 
-  color: rgba(255,255,255,.82);
+  color: rgba(255,255,255,.84);
 
   font-size: 17px;
 
   line-height: 1.7;
-
 }
 
 
 /* =========================================================
-   BOTÓN WHATSAPP DEL HERO
+   BOTÓN HERO
 ========================================================= */
 
 .hero-whatsapp {
@@ -420,11 +399,9 @@ h2 span {
 
   border-radius: 50px;
 
-  background: #ffffff;
+  background: white;
 
   color: #183D29;
-
-  text-decoration: none;
 
   font-size: 16px;
 
@@ -433,10 +410,7 @@ h2 span {
   box-shadow:
     0 12px 35px rgba(0,0,0,.18);
 
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease;
-
+  transition: .25s ease;
 }
 
 
@@ -445,7 +419,6 @@ h2 span {
   font-size: 22px;
 
   line-height: 1;
-
 }
 
 
@@ -454,109 +427,12 @@ h2 span {
   transform: translateY(-3px);
 
   box-shadow:
-    0 16px 40px rgba(0,0,0,.25);
-
-}
-/* =========================================================
-   FRANJA DE BENEFICIOS
-========================================================= */
-
-.trust-section {
-
-  background: #193F2C;
-
-  color: white;
-
-  padding: 28px 0;
-
-}
-
-
-.trust-grid {
-
-  width: 90%;
-
-  max-width: 1250px;
-
-  margin: auto;
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 30px;
-
-}
-
-
-.trust-item {
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 16px;
-
-}
-
-
-.trust-icon {
-
-  width: 62px;
-
-  height: 62px;
-
-  flex-shrink: 0;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: rgba(204,183,112,.12);
-
-  border: 1px solid rgba(204,183,112,.12);
-
-}
-
-
-.trust-icon svg {
-
-  width: 28px;
-
-  height: 28px;
-
-}
-
-
-.trust-item strong {
-
-  display: block;
-
-  margin-bottom: 6px;
-
-  color: #ffffff;
-
-  font-size: 15px;
-
-}
-
-
-.trust-item span {
-
-  color: rgba(255,255,255,.65);
-
-  font-size: 13px;
-
+    0 18px 42px rgba(0,0,0,.28);
 }
 
 
 /* =========================================================
-   PRODUCTO
+   PRODUCTO DEL HERO
 ========================================================= */
 
 .hero-product {
@@ -565,14 +441,13 @@ h2 span {
 
   height: 100%;
 
-  min-height: 580px;
+  min-height: 650px;
 
   display: flex;
 
   align-items: center;
 
   justify-content: center;
-
 }
 
 
@@ -582,19 +457,21 @@ h2 span {
 
   position: absolute;
 
-  width: 600px;
+  width: 650px;
 
-  height: 600px;
+  height: 650px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(91,122,77,.25),
-      transparent 68%
+      rgba(99,132,88,.30),
+      rgba(99,132,88,.10) 45%,
+      transparent 70%
     );
 
+  filter: blur(2px);
 }
 
 
@@ -604,33 +481,36 @@ h2 span {
 
   z-index: 2;
 
-  width: 100%;
+  width: 120%;
 
-  max-width: 620px;
+  max-width: 760px;
 
-  max-height: 570px;
+  max-height: 650px;
 
   object-fit: contain;
 
-  display: block;
-
   filter:
-    drop-shadow(0 30px 35px rgba(0,0,0,.35));
+    drop-shadow(0 32px 35px rgba(0,0,0,.38));
 
+  transform: translateX(15px);
 }
+
+
 /* =========================================================
-   TRUST
+   FRANJA DE BENEFICIOS
 ========================================================= */
 
 .trust-section {
 
-  background: var(--green);
+  position: relative;
+
+  background: #193F2C;
 
   color: white;
 
-  padding: 30px 0;
-
+  padding: 28px 0;
 }
+
 
 .trust-grid {
 
@@ -639,8 +519,8 @@ h2 span {
   grid-template-columns: repeat(4, 1fr);
 
   gap: 25px;
-
 }
+
 
 .trust-item {
 
@@ -649,40 +529,50 @@ h2 span {
   align-items: center;
 
   gap: 15px;
-
 }
+
 
 .trust-icon {
 
-  width: 42px;
-  height: 42px;
+  width: 58px;
+
+  height: 58px;
+
+  flex-shrink: 0;
 
   border-radius: 50%;
 
-  border: 1px solid rgba(255,255,255,.25);
+  border: 1px solid rgba(215,189,134,.22);
+
+  background: rgba(215,189,134,.08);
 
   display: grid;
 
   place-items: center;
 
-  color: #D7BD86;
+  color: var(--gold);
 
+  font-size: 23px;
 }
+
 
 .trust-item strong {
 
   display: block;
 
-  font-size: .85rem;
+  margin-bottom: 5px;
 
+  font-size: .88rem;
+
+  color: white;
 }
+
 
 .trust-item p {
 
-  color: rgba(255,255,255,.65);
+  color: rgba(255,255,255,.62);
 
-  font-size: .7rem;
-
+  font-size: .72rem;
 }
 
 
@@ -695,8 +585,8 @@ h2 span {
   padding: 120px 0;
 
   background: var(--white);
-
 }
+
 
 .story-grid {
 
@@ -707,14 +597,14 @@ h2 span {
   gap: 90px;
 
   align-items: center;
-
 }
+
 
 .story-image {
 
   position: relative;
-
 }
+
 
 .story-image::before {
 
@@ -726,7 +616,7 @@ h2 span {
 
   height: 80%;
 
-  background: var(--green-light);
+  background: #DDE8DF;
 
   border-radius: 50%;
 
@@ -735,8 +625,8 @@ h2 span {
   top: 10%;
 
   z-index: 0;
-
 }
+
 
 .story-image img {
 
@@ -744,17 +634,19 @@ h2 span {
 
   z-index: 1;
 
-  border-radius: 30px;
+  width: 100%;
 
+  border-radius: 30px;
 }
+
 
 .story-content p {
 
   color: var(--text-light);
 
   margin: 20px 0;
-
 }
+
 
 .story-line {
 
@@ -765,12 +657,11 @@ h2 span {
   background: var(--gold);
 
   margin-top: 30px;
-
 }
 
 
 /* =========================================================
-   INGREDIENTS
+   INGREDIENTES
 ========================================================= */
 
 .ingredients {
@@ -778,18 +669,18 @@ h2 span {
   padding: 120px 0;
 
   background: var(--cream);
-
 }
+
 
 .ingredient-grid {
 
   display: grid;
 
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 25px;
-
 }
+
 
 .ingredient-card {
 
@@ -806,30 +697,31 @@ h2 span {
   border: 1px solid var(--border);
 
   transition: .3s ease;
-
 }
+
 
 .ingredient-card:hover {
 
   transform: translateY(-7px);
 
   box-shadow: var(--shadow);
-
 }
+
 
 .ingredient-card.featured {
 
   background: var(--green);
 
   color: white;
-
 }
+
 
 .card-number {
 
   position: absolute;
 
   top: 25px;
+
   right: 30px;
 
   font-size: .7rem;
@@ -837,8 +729,8 @@ h2 span {
   letter-spacing: .15em;
 
   opacity: .5;
-
 }
+
 
 .ingredient-icon {
 
@@ -847,67 +739,66 @@ h2 span {
   color: var(--gold);
 
   margin-bottom: 40px;
-
 }
+
 
 .ingredient-card h3 {
 
   font-size: 1.6rem;
 
   margin-bottom: 15px;
-
 }
+
 
 .ingredient-card p {
 
   color: var(--text-light);
 
   font-size: .9rem;
-
 }
+
 
 .ingredient-card.featured p {
 
   color: rgba(255,255,255,.7);
-
 }
 
 
 /* =========================================================
-   BENEFITS
+   BENEFICIOS
 ========================================================= */
 
 .benefits {
 
   padding: 120px 0;
 
-  background: var(--white);
-
+  background: white;
 }
+
 
 .benefit-grid {
 
   display: grid;
 
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   border-top: 1px solid var(--border);
-
 }
+
 
 .benefit-card {
 
   padding: 40px 25px;
 
   border-right: 1px solid var(--border);
-
 }
+
 
 .benefit-card:last-child {
 
   border-right: none;
-
 }
+
 
 .benefit-card span {
 
@@ -916,28 +807,27 @@ h2 span {
   font-size: .7rem;
 
   letter-spacing: .15em;
-
 }
+
 
 .benefit-card h3 {
 
   font-size: 1.5rem;
 
   margin: 30px 0 15px;
-
 }
+
 
 .benefit-card p {
 
   color: var(--text-light);
 
   font-size: .85rem;
-
 }
 
 
 /* =========================================================
-   PRODUCT
+   PRODUCTO
 ========================================================= */
 
 .product-section {
@@ -945,8 +835,8 @@ h2 span {
   padding: 120px 0;
 
   background: var(--cream);
-
 }
+
 
 .product-grid {
 
@@ -957,8 +847,8 @@ h2 span {
   align-items: center;
 
   gap: 80px;
-
 }
+
 
 .product-showcase {
 
@@ -968,7 +858,9 @@ h2 span {
 
   justify-content: center;
 
+  align-items: center;
 }
+
 
 .product-showcase img {
 
@@ -980,38 +872,40 @@ h2 span {
 
   max-width: 570px;
 
-  filter: drop-shadow(
-    0 30px 30px rgba(55,40,26,.18)
-  );
-
+  filter:
+    drop-shadow(
+      0 30px 30px rgba(55,40,26,.18)
+    );
 }
+
 
 .product-circle {
 
   position: absolute;
 
   width: 450px;
+
   height: 450px;
 
   border-radius: 50%;
 
-  background: var(--green-light);
-
+  background: #DDE8DF;
 }
+
 
 .product-info h2 {
 
   margin-bottom: 25px;
-
 }
+
 
 .product-text {
 
   color: var(--text-light);
 
   margin-bottom: 30px;
-
 }
+
 
 .product-details {
 
@@ -1026,32 +920,70 @@ h2 span {
   padding: 20px 0;
 
   margin-bottom: 30px;
-
 }
+
 
 .product-details div {
 
   display: flex;
 
   flex-direction: column;
-
 }
+
 
 .product-details span {
 
   font-size: .7rem;
 
   color: var(--text-light);
-
 }
+
 
 .product-details strong {
 
   color: var(--green);
 
   font-size: .85rem;
-
 }
+
+
+.btn-primary {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  padding: 15px 25px;
+
+  border-radius: 50px;
+
+  background: var(--green);
+
+  color: white;
+
+  font-weight: 700;
+
+  transition: .25s ease;
+}
+
+
+.btn-primary:hover {
+
+  transform: translateY(-3px);
+
+  background: var(--green-2);
+}
+
+
+.btn-primary span {
+
+  font-size: 20px;
+}
+
 
 .delivery {
 
@@ -1060,7 +992,6 @@ h2 span {
   color: var(--text-light);
 
   font-size: .75rem;
-
 }
 
 
@@ -1072,9 +1003,9 @@ h2 span {
 
   padding: 120px 0;
 
-  background: var(--white);
-
+  background: white;
 }
+
 
 .reviews-grid {
 
@@ -1083,8 +1014,8 @@ h2 span {
   grid-template-columns: repeat(3,1fr);
 
   gap: 25px;
-
 }
+
 
 .review {
 
@@ -1095,8 +1026,8 @@ h2 span {
   border-radius: var(--radius);
 
   background: var(--cream);
-
 }
+
 
 .stars {
 
@@ -1105,8 +1036,8 @@ h2 span {
   letter-spacing: 4px;
 
   margin-bottom: 25px;
-
 }
+
 
 .review p {
 
@@ -1115,54 +1046,6 @@ h2 span {
   font-size: 1.2rem;
 
   margin-bottom: 25px;
-
-}
-
-.review strong {
-
-  color: var(--green);
-
-  font-size: .7rem;
-
-  text-transform: uppercase;
-
-  letter-spacing: .1em;
-
-}
-
-
-/* =========================================================
-   GALLERY
-========================================================= */
-
-.gallery {
-
-  padding: 30px 0 120px;
-
-  background: var(--white);
-
-}
-
-.gallery-grid {
-
-  display: grid;
-
-  grid-template-columns: 1.2fr 1fr 1fr;
-
-  gap: 15px;
-
-}
-
-.gallery-grid img {
-
-  width: 100%;
-
-  height: 350px;
-
-  object-fit: cover;
-
-  border-radius: 20px;
-
 }
 
 
@@ -1175,8 +1058,8 @@ h2 span {
   padding: 120px 0;
 
   background: var(--cream);
-
 }
+
 
 .faq-grid {
 
@@ -1185,16 +1068,16 @@ h2 span {
   grid-template-columns: .8fr 1.2fr;
 
   gap: 100px;
-
 }
+
 
 .faq-list details {
 
   border-bottom: 1px solid var(--border);
 
   padding: 22px 0;
-
 }
+
 
 .faq-list summary {
 
@@ -1211,22 +1094,22 @@ h2 span {
   color: var(--green);
 
   font-weight: 600;
-
 }
+
 
 .faq-list summary::-webkit-details-marker {
 
   display: none;
-
 }
+
 
 .faq-list summary span {
 
   font-size: 1.5rem;
 
   font-weight: 300;
-
 }
+
 
 .faq-list p {
 
@@ -1235,12 +1118,11 @@ h2 span {
   color: var(--text-light);
 
   font-size: .9rem;
-
 }
 
 
 /* =========================================================
-   FINAL CTA
+   CTA FINAL
 ========================================================= */
 
 .final-cta {
@@ -1252,26 +1134,26 @@ h2 span {
   background: var(--green);
 
   color: white;
-
 }
+
 
 .final-cta .eyebrow {
 
-  color: #D7BD86;
-
+  color: var(--gold);
 }
+
 
 .final-cta h2 {
 
   font-size: clamp(3rem, 6vw, 5rem);
-
 }
+
 
 .final-cta h2 span {
 
-  color: #D7BD86;
-
+  color: var(--gold-light);
 }
+
 
 .final-cta p {
 
@@ -1280,21 +1162,20 @@ h2 span {
   margin: 25px auto 35px;
 
   color: rgba(255,255,255,.7);
-
 }
+
 
 .btn-primary.light {
 
   background: white;
 
   color: var(--green);
-
 }
+
 
 .btn-primary.light span {
 
   color: var(--green);
-
 }
 
 
@@ -1307,8 +1188,8 @@ footer {
   background: #10291E;
 
   color: white;
-
 }
+
 
 .footer-grid {
 
@@ -1319,18 +1200,8 @@ footer {
   grid-template-columns: 2fr 1fr 1fr;
 
   gap: 70px;
-
 }
 
-.footer-logo {
-
-  width: 150px;
-
-  margin-bottom: 20px;
-
-  filter: brightness(0) invert(1);
-
-}
 
 .footer-grid p {
 
@@ -1339,8 +1210,8 @@ footer {
   color: rgba(255,255,255,.55);
 
   font-size: .8rem;
-
 }
+
 
 .footer-grid h3 {
 
@@ -1353,8 +1224,8 @@ footer {
   text-transform: uppercase;
 
   letter-spacing: .1em;
-
 }
+
 
 .footer-grid a,
 .footer-grid span {
@@ -1366,14 +1237,14 @@ footer {
   font-size: .8rem;
 
   margin-bottom: 10px;
-
 }
+
 
 .footer-grid a:hover {
 
   color: white;
-
 }
+
 
 .footer-bottom {
 
@@ -1384,7 +1255,6 @@ footer {
   color: rgba(255,255,255,.4);
 
   font-size: .7rem;
-
 }
 
 
@@ -1397,15 +1267,19 @@ footer {
   position: fixed;
 
   right: 24px;
+
   bottom: 24px;
 
-  width: 62px;
-  height: 62px;
+  width: 64px;
+
+  height: 64px;
 
   z-index: 9999;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   background: #25D366;
@@ -1413,433 +1287,129 @@ footer {
   border-radius: 50%;
 
   box-shadow:
-    0 8px 25px rgba(37, 211, 102, 0.35);
+    0 8px 25px rgba(37,211,102,.38);
 
-  transition:
-    transform .25s ease,
-    box-shadow .25s ease;
-
+  transition: .25s ease;
 }
+
 
 .whatsapp-float svg {
 
-  width: 34px;
-  height: 34px;
+  width: 37px;
 
-  fill: #ffffff;
+  height: 37px;
+
+  fill: #FFFFFF;
 
   display: block;
-
 }
+
 
 .whatsapp-float:hover {
 
   transform: translateY(-4px) scale(1.06);
 
   box-shadow:
-    0 12px 32px rgba(37, 211, 102, 0.45);
-
+    0 12px 32px rgba(37,211,102,.48);
 }
+
+
 /* =========================================================
-   RESPONSIVE
+   TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
-
-  .nav-links {
-
-    display: none;
-
-  }
-
-  .hero {
-
-    min-height: auto;
-
-    padding: 140px 0 80px;
-
-  }
-
-  .hero-grid,
-  .story-grid,
-  .product-grid,
-  .faq-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .hero-content {
-
-    text-align: center;
-
-  }
-
-  .hero-description {
-
-    margin-left: auto;
-    margin-right: auto;
-
-  }
-
-  .hero-buttons {
-
-    justify-content: center;
-
-  }
-
-  .hero-trust {
-
-    justify-content: center;
-
-  }
-
-  .hero-product {
-
-    order: -1;
-
-  }
-
-  .hero-product img {
-
-    max-width: 450px;
-
-  }
-
-  .trust-grid {
-
-    grid-template-columns: repeat(2,1fr);
-
-  }
-
-  .ingredient-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .benefit-grid {
-
-    grid-template-columns: repeat(2,1fr);
-
-  }
-
-  .benefit-card:nth-child(2) {
-
-    border-right: none;
-
-  }
-
-  .reviews-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .gallery-grid {
-
-    grid-template-columns: 1fr 1fr;
-
-  }
-
-  .gallery-grid img:first-child {
-
-    grid-column: span 2;
-
-  }
-
-  .footer-grid {
-
-    grid-template-columns: 1fr 1fr;
-
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .container {
-
-    width: 90%;
-
-  }
-
-  .header {
-
-    position: absolute;
-
-  }
+@media (max-width: 1000px) {
 
   .nav {
 
-    min-height: 80px;
-
+    gap: 20px;
   }
 
-  .logo img {
 
-    width: 120px;
+  .nav-links {
 
+    gap: 20px;
   }
 
-  .nav-btn {
 
-    padding: 10px 15px;
+  .hero-container {
 
-    font-size: .75rem;
+    grid-template-columns: 1fr 1fr;
 
+    gap: 0;
   }
 
-  .hero {
-
-    padding-top: 110px;
-
-  }
-
-  h1 {
-
-    font-size: 2.9rem;
-
-  }
-
-  h2 {
-
-    font-size: 2.5rem;
-
-  }
 
   .hero-product img {
 
-    max-width: 340px;
+    width: 115%;
 
+    max-width: 650px;
   }
 
-  .floating-badge {
-
-    width: 85px;
-    height: 85px;
-
-    right: 5px;
-
-    font-size: .55rem;
-
-  }
-
-  .hero-trust {
-
-    gap: 15px;
-
-  }
-
-  .hero-trust strong {
-
-    font-size: .75rem;
-
-  }
-
-  .hero-trust span {
-
-    font-size: .6rem;
-
-  }
 
   .trust-grid {
 
-    grid-template-columns: 1fr;
-
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .trust-item {
 
-    padding: 5px 0;
+  .story-grid,
+  .product-grid {
 
-  }
-
-  .story,
-  .ingredients,
-  .benefits,
-  .product-section,
-  .reviews,
-  .faq {
-
-    padding: 80px 0;
-
-  }
-
-  .benefit-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .benefit-card {
-
-    border-right: none;
-
-    border-bottom: 1px solid var(--border);
-
-  }
-
-  .benefit-card:last-child {
-
-    border-bottom: none;
-
-  }
-
-  .product-details {
-
-    grid-template-columns: 1fr;
-
-    gap: 15px;
-
-  }
-
-  .gallery-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .gallery-grid img:first-child {
-
-    grid-column: auto;
-
-  }
-
-  .gallery-grid img {
-
-    height: 300px;
-
-  }
-
-  .footer-grid {
-
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-
-  }
-
-  
-
-  .whatsapp-float img {
-
-    width: 32px;
-
-    height: 32px;
-
+    gap: 50px;
   }
 
 }
-/* ===== CORRECCIÓN DE TEXTO EN EL HERO ===== */
 
-.hero h1 {
-    color: #3f3025 !important;
-    text-shadow: none !important;
-}
 
-.hero p {
-    color: #4f4035 !important;
-    text-shadow: none !important;
-}
-
-.hero .price {
-    color: #7a4b2a !important;
-    font-weight: 800;
-    text-shadow: none !important;
-}
-
-.hero .content,
-.hero .hero-content {
-    color: #3f3025;
-}
-
-/* Texto de contenido y presentación */
-.hero .subtitle,
-.hero .description,
-.hero .product-info {
-    color: #4f4035 !important;
-}
-
-/* Precio más visible */
-.hero .price {
-    font-size: 2rem;
-    margin-top: 15px;
-    margin-bottom: 8px;
-}
-/* HERO - Texto oscuro para fondo claro */
-
-.hero .price,
-.hero .weight,
-.hero .shipping,
-.hero span,
-.hero p {
-    color: #4A3526 !important;
-}
-
-/* Precio destacado */
-.hero .price {
-    color: #8B5E3C !important;
-    font-weight: 800 !important;
-    font-size: 2rem !important;
-}
-
-/* 30 gramos */
-.hero .weight {
-    color: #5A4637 !important;
-    font-weight: 600 !important;
-}
-
-/* Envíos a todo Colombia */
-.hero .shipping {
-    color: #5A4637 !important;
-    font-weight: 600 !important;
-}
 /* =========================================================
-   HERO — MÓVIL
+   MÓVIL
 ========================================================= */
 
 @media (max-width: 768px) {
 
+  /* HEADER */
+
   .header {
 
     position: absolute;
 
+    background: transparent;
   }
 
 
   .nav {
 
-    min-height: 70px;
+    min-height: 78px;
 
     justify-content: center;
 
+    padding: 0;
   }
 
 
   .nav-links {
 
     display: none;
-
   }
 
 
   .nav-btn {
 
-    display: inline-flex;
+    padding: 10px 18px;
 
-    padding: 9px 17px;
-
-    font-size: 13px;
-
+    font-size: 12px;
   }
 
+
+  /* HERO */
 
   .hero {
 
     min-height: auto;
 
+    padding: 105px 0 0;
   }
 
 
@@ -1849,31 +1419,27 @@ footer {
 
     min-height: auto;
 
-    padding-top: 100px;
-
-    padding-bottom: 45px;
-
     display: flex;
 
     flex-direction: column;
 
-    gap: 5px;
+    gap: 0;
 
     text-align: center;
-
   }
 
 
   .hero-content {
 
-    padding: 35px 0 0;
+    width: 100%;
+
+    padding: 35px 0 10px;
 
     display: flex;
 
     flex-direction: column;
 
     align-items: center;
-
   }
 
 
@@ -1881,135 +1447,378 @@ footer {
 
     justify-content: center;
 
-    margin-bottom: 18px;
-
     font-size: 11px;
 
     letter-spacing: 3px;
 
+    margin-bottom: 18px;
+  }
+
+
+  .hero-tag span {
+
+    width: 20px;
   }
 
 
   .hero-content h1 {
 
+    max-width: 100%;
+
     font-size: clamp(48px, 14vw, 68px);
 
-    line-height: .92;
+    line-height: .94;
 
     letter-spacing: -2px;
-
   }
 
 
   .hero-content p {
 
-    margin: 22px auto 28px;
-
     max-width: 340px;
+
+    margin: 22px auto 25px;
 
     font-size: 15px;
 
     line-height: 1.55;
-
   }
 
 
   .hero-whatsapp {
 
-    min-width: auto;
+    min-width: 0;
 
-    width: 100%;
+    width: auto;
 
-    max-width: 310px;
+    padding: 14px 22px;
 
-    padding: 15px 20px;
+    font-size: 14px;
 
+    gap: 12px;
   }
 
 
-  .hero-product {
+  /* PRODUCTO HERO */
 
-    min-height: 320px;
+  .hero-product {
 
     width: 100%;
 
-    margin-top: -10px;
+    min-height: 390px;
 
+    height: 390px;
+
+    margin-top: 0;
+
+    overflow: visible;
   }
 
 
   .hero-product::before {
 
-    width: 350px;
+    width: 360px;
 
-    height: 350px;
-
+    height: 360px;
   }
 
 
   .hero-product img {
 
-    width: 100%;
+    width: 115%;
 
-    max-width: 390px;
+    max-width: 520px;
 
-    max-height: 340px;
+    max-height: 420px;
 
+    transform: translateX(0);
+
+    object-fit: contain;
   }
 
 
+  /* TRUST */
+
   .trust-section {
 
-    padding: 25px 0;
-
+    padding: 24px 0;
   }
 
 
   .trust-grid {
 
+    width: 90%;
+
     grid-template-columns: 1fr 1fr;
 
-    gap: 22px 12px;
-
+    gap: 18px 12px;
   }
 
 
   .trust-item {
 
-    gap: 10px;
+    gap: 9px;
 
+    align-items: center;
   }
 
 
   .trust-icon {
 
-    width: 48px;
+    width: 42px;
 
-    height: 48px;
+    height: 42px;
 
-  }
-
-
-  .trust-icon svg {
-
-    width: 23px;
-
-    height: 23px;
-
+    font-size: 17px;
   }
 
 
   .trust-item strong {
 
-    font-size: 12px;
+    font-size: 11px;
 
+    line-height: 1.2;
+
+    margin-bottom: 3px;
   }
 
 
-  .trust-item span {
+  .trust-item p {
+
+    font-size: 9px;
+
+    line-height: 1.25;
+  }
+
+
+  /* SECCIONES */
+
+  .story,
+  .ingredients,
+  .benefits,
+  .product-section,
+  .reviews,
+  .faq {
+
+    padding: 80px 0;
+  }
+
+
+  .story-grid,
+  .product-grid,
+  .faq-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .story-grid {
+
+    gap: 50px;
+  }
+
+
+  /* INGREDIENTES */
+
+  .ingredient-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  /* BENEFICIOS */
+
+  .benefit-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .benefit-card {
+
+    border-right: none;
+
+    border-bottom: 1px solid var(--border);
+  }
+
+
+  .benefit-card:last-child {
+
+    border-bottom: none;
+  }
+
+
+  /* PRODUCTO */
+
+  .product-grid {
+
+    gap: 50px;
+  }
+
+
+  .product-circle {
+
+    width: 320px;
+
+    height: 320px;
+  }
+
+
+  .product-details {
+
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  /* OPINIONES */
+
+  .reviews-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  /* FAQ */
+
+  .faq-grid {
+
+    gap: 50px;
+  }
+
+
+  /* FOOTER */
+
+  .footer-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+    padding: 60px 0;
+  }
+
+
+  /* WHATSAPP */
+
+  .whatsapp-float {
+
+    width: 58px;
+
+    height: 58px;
+
+    right: 18px;
+
+    bottom: 18px;
+  }
+
+
+  .whatsapp-float svg {
+
+    width: 34px;
+
+    height: 34px;
+  }
+
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .nav-btn {
+
+    padding: 9px 16px;
+
+    font-size: 11px;
+  }
+
+
+  .hero {
+
+    padding-top: 95px;
+  }
+
+
+  .hero-content h1 {
+
+    font-size: 47px;
+  }
+
+
+  .hero-content p {
+
+    font-size: 14px;
+
+    max-width: 310px;
+  }
+
+
+  .hero-product {
+
+    min-height: 330px;
+
+    height: 330px;
+  }
+
+
+  .hero-product img {
+
+    width: 120%;
+
+    max-height: 360px;
+  }
+
+
+  .trust-grid {
+
+    gap: 16px 8px;
+  }
+
+
+  .trust-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    font-size: 15px;
+  }
+
+
+  .trust-item strong {
 
     font-size: 10px;
+  }
 
+
+  .trust-item p {
+
+    font-size: 8px;
+  }
+
+
+  .whatsapp-float {
+
+    width: 55px;
+
+    height: 55px;
+
+    right: 15px;
+
+    bottom: 15px;
+  }
+
+
+  .whatsapp-float svg {
+
+    width: 32px;
+
+    height: 32px;
   }
 
 }
