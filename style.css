@@ -437,17 +437,22 @@ h2 span {
 
 .hero-product {
 
-  position: relative;
+  position: absolute;
+
+  top: 0;
+  right: 0;
 
   height: 100%;
 
-  min-height: 650px;
+  width: 58%;
 
   display: flex;
 
   align-items: center;
 
-  justify-content: center;
+  justify-content: flex-end;
+
+  overflow: visible;
 }
 
 
@@ -481,18 +486,18 @@ h2 span {
 
   z-index: 2;
 
-  width: 120%;
+  width: 100%;
 
-  max-width: 760px;
+  max-width: none;
 
-  max-height: 650px;
+  height: auto;
 
   object-fit: contain;
 
+  object-position: right center;
+
   filter:
     drop-shadow(0 32px 35px rgba(0,0,0,.38));
-
-  transform: translateX(15px);
 }
 
 
@@ -1332,12 +1337,70 @@ footer {
   }
 
 
-  .hero-container {
+  .hero-product {
 
-    grid-template-columns: 1fr 1fr;
+  position: absolute;
 
-    gap: 0;
-  }
+  top: 0;
+  right: 0;
+
+  height: 100%;
+
+  width: 58%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  overflow: visible;
+}
+
+
+.hero-product::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+
+  height: 650px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(99,132,88,.30),
+      rgba(99,132,88,.10) 45%,
+      transparent 70%
+    );
+
+  filter: blur(2px);
+}
+
+
+.hero-product img {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: none;
+
+  height: auto;
+
+  object-fit: contain;
+
+  object-position: right center;
+
+  filter:
+    drop-shadow(0 32px 35px rgba(0,0,0,.38));
+}
 
 
   .hero-product img {
@@ -1502,7 +1565,9 @@ footer {
   /* PRODUCTO HERO */
 
   .hero-product {
-
+position: relative;  
+right: auto;         
+top: auto;
     width: 100%;
 
     min-height: 390px;
